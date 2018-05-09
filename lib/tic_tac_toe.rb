@@ -53,13 +53,13 @@ end
 def turn()
   puts "Please enter 1-9:"
   index = input_to_index(gets.strip)
-  if valid_move?(@board, index)
-    move(board, index, current_player(@board))
-    display_board(@board)
+  if valid_move?(index)
+    move(board, index, current_player())
+    display_board()
   else
     #binding.pry
     puts "That was an invalid entry."
-    turn(@board)
+    turn()
   end
 end
 
