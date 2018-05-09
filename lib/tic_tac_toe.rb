@@ -60,7 +60,6 @@ def turn(@board)
     #binding.pry
     puts "That was an invalid entry."
     turn(@board)
-
   end
 end
 
