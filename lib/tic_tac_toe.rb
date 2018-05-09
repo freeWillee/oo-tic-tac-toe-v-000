@@ -76,7 +76,7 @@ end
 
 #The #current_player method should take in an argument of the game board and use the #turn_count method to determine if it is "X"'s turn or "O"'s.
 def current_player()
-  if turn_count(@board) % 2 == 0
+  if turn_count() % 2 == 0
     return "X"
   else
     return "O"
