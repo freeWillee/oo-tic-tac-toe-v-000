@@ -114,4 +114,33 @@ def full?()
   end
 end
 
+def draw?()
+  #accepts a board and returns true if the board has not been won and is full
+  # and false if the board is not won and the board is not full, and false if the board is won.
+  # You should be able to compose this method solely using the methods you used above with some ruby logic.
+  if !won?(@board) && full?(@board)
+    return true
+  end
+end
+
+def over?()
+  #Build a method #over? that accepts a board and returns true if the board has been won, is a draw, or is full. You should be able to compose this method solely using the methods you used above with some ruby logic.
+
+  if won?(@board) || draw?(@board) || full?(@board)
+    return true
+  else
+    false
+  end
+end
+
+def winner()
+  #The #winner method should accept a board and return the token, "X" or "O" that has won the game given a winning board.
+  #The #winner method can be greatly simplified by using the methods and their return values you defined above.
+  if won?(@board)
+    return @board[won?(@board)[0]]
+  else
+    nil
+  end
+end
+
 end
