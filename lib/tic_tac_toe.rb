@@ -49,4 +49,19 @@ def valid_move?(@board, index)
   end
 end
 
+#define the turn method.
+def turn(@board)
+  puts "Please enter 1-9:"
+  index = input_to_index(gets.strip)
+  if valid_move?(@board, index)
+    move(board, index, current_player(@board))
+    display_board(@board)
+  else
+    #binding.pry
+    puts "That was an invalid entry."
+    turn(@board)
+
+  end
+end
+
 end
