@@ -63,4 +63,15 @@ def turn(@board)
   end
 end
 
+#turncount - This method takes in an argument of the board array and returns the number of turns that have been played.
+def turn_count(@board)
+  i = 0
+  @board.each do |position|
+    if position == "X" || position == "O"
+      i += 1
+    end
+  end
+  return i
+end
+
 end
