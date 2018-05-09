@@ -32,4 +32,10 @@ def move(@board, index, token)
   @board[index] = token
 end
 
+# The #position_taken? method will be responsible for evaluating the position selected by the user against the Tic Tac Toe board and checking to see whether or not that index on the board array is occupied. If the user would like to fill out position 1, our #position_taken? method will check to see if that board index is vacant or if it contains an "X" or an "O". If the position is free, the method should return false (i.e. "not taken"), otherwise it will return true.
+
+def position_taken?(@board, index)
+  !(@board[index].nil? || @board[index] == " ")
+end
+
 end
