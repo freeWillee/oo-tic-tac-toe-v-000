@@ -22,4 +22,14 @@ class TicTacToe
   puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
 end
 
+#converts user_input to an integer
+def input_to_index(user_input)
+  return user_input.to_i - 1
+end
+
+#Your #move method must take in three arguments: 1) the board array, 2) the index in the board array that the player would like to fill out with an "X" or and "O", and 3) the player's character (either "X" or "O"). We previously had you write this method with a default argument of "X" for the third argument, but that is no longer needed.
+def move(@board, index, token)
+  @board[index] = token
+end
+
 end
